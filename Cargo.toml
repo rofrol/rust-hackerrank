@@ -1,5 +1,5 @@
 [package]
 
-name = "solve-me-first"
+name = "hackerrank.com in Rust"
 version = "0.0.1"
 authors = ["Roman Frołow <rofrol@gmail.com>"]
