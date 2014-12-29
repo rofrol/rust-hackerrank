@@ -1,12 +1,10 @@
 use std::io;
-use std::io::BufferedReader;
 fn main() {
     let line = io::stdin().read_line().unwrap();
     let line_t: &str = line.trim();
     let count: int = line_t.parse::<int>().unwrap();
     let mut v: Vec<int> = Vec::new();
-    let mut reader = BufferedReader::new(io::stdin());
-    for line in reader.lines() {
+    for line in io::stdin().lock().lines() {
         let line_u: String = line.unwrap();
         let line_t: &str = line_u.as_slice().trim();
         let num: int = line_t.parse::<int>().unwrap();
