@@ -21,6 +21,18 @@ Expected Output:
     5
     10
 
+## Flipping bits
+
+Run:
+
+    echo -e "3\n2147483647\n1\n0" | cargo run --bin flipping-bits
+
+Expected Output:
+
+    2147483648
+    4294967294
+    4294967295
+
 ## Find digits
 
 Run:
