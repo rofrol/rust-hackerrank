@@ -1,26 +1,25 @@
 use std::io;
 fn main() {
-    let line = io::stdin().read_line().unwrap();
-    let line_t: &str = line.trim();
-    let count: int = line_t.parse::<int>().unwrap();
-    let mut v: Vec<int> = Vec::new();
-    for line in io::stdin().lock().lines() {
-        let line_u: String = line.unwrap();
+    let line_u = io::stdin().read_line().unwrap();
+    let line_t: &str = line_u.trim();
+    let lines: u64 = line_t.parse::<u64>().unwrap();
+    let mut v: Vec<u64> = Vec::new();
+    for i in range(0u64, lines) {
+        let line_u = io::stdin().read_line().unwrap();
         let line_t: &str = line_u.as_slice().trim();
-        let num: int = line_t.parse::<int>().unwrap();
+        let num: u64 = line_t.parse::<u64>().unwrap();
         v.push(num);
     }
-    let mut k: int;
-    let mut count: int;
+    let mut k: u64;
+    let mut count: u64;
     for x in v.iter() {
         k = *x;
         count = 0;
         while k != 0 {
-            // don't divide by 0 && don't count k < 10, ie. 3%(3%10) == 0
-            if k % 10 != 0 && k >= 10 && k % (k % 10) == 0 {
+            if k % 10 != 0 && *x % (k % 10) == 0 {
                 count += 1;
             }
-            k = k/10;
+            k = k / 10;
         }
         println!("{}", count);
     }
