@@ -10,6 +10,17 @@ Expected Output:
 
     5
 
+## Solve me second
+
+Run:
+
+    echo -e "2\n2 3\n3 7" | cargo run --bin solve-me-second
+
+Expected Output:
+
+    5
+    10
+
 ## Find digits
 
 Run:
