@@ -33,6 +33,17 @@ Expected Output:
     4294967294
     4294967295
 
+## Utopian tree
+
+Run:
+
+    echo -e "2\n4\n3" | cargo run --bin utopian-tree
+
+Expected Output:
+
+    7
+    6
+
 ## Find digits
 
 Run:
