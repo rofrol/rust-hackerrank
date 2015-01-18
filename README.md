@@ -44,6 +44,16 @@ Expected Output:
     7
     6
 
+## Maximizing XOR
+
+Run:
+
+    echo -e "10\n15" | cargo run --bin maximizing-xor
+
+Expected Output:
+
+    7
+
 ## Find digits
 
 Run:
