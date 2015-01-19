@@ -7,8 +7,8 @@ fn main() {
 
 fn run(l: u32, r: u32) -> u32 {
     let mut max: u32 = 0;
-    for i in range(l, r + 1) {
-        for j in range(i, r + 1) {
+    for i in (l..r + 1) {
+        for j in (i..r + 1) {
             if i ^ j > max { max = i ^ j; }
         }
     }

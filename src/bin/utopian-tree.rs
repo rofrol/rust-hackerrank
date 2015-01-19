@@ -2,7 +2,7 @@ use std::io;
 fn main() {
     let lines: u32 = io::stdin().read_line().ok().unwrap().trim().parse().unwrap();
     let mut num: u32;
-    for _ in range(0u32, lines) {
+    for _ in (0u32..lines) {
         num = io::stdin().read_line().ok().unwrap().trim().parse().unwrap();
         println!("{}", run(num));
     }
@@ -10,7 +10,7 @@ fn main() {
 
 fn run(num: u32) -> u64 {
     let mut count: u64 = 1;
-    for k in range(1u32, num + 1) {
+    for k in (1u32..num + 1) {
         count = if k % 2 == 0 {
             count + 1
         } else {

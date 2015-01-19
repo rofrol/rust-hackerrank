@@ -1,7 +1,7 @@
 use std::io;
 fn main() {
     let lines: u32 = io::stdin().read_line().ok().unwrap().trim().parse().unwrap();
-    for i in range(0u32, lines) {
+    for i in (0u32..lines) {
         let line = io::stdin().read_line().ok().unwrap().trim().to_string();
         println!("{}", run(line.as_slice()));
     }
