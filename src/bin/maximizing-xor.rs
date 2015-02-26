@@ -1,7 +1,7 @@
-use std::io;
+use std::old_io;
 fn main() {
-    let l: u32 = io::stdin().read_line().ok().unwrap().trim().parse().unwrap();
-    let r: u32 = io::stdin().read_line().ok().unwrap().trim().parse().unwrap();
+    let l: u32 = old_io::stdin().read_line().ok().unwrap().trim().parse().unwrap();
+    let r: u32 = old_io::stdin().read_line().ok().unwrap().trim().parse().unwrap();
     println!("{}", run(l, r));
 }
 

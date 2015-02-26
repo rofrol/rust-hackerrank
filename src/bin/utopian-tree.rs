@@ -1,9 +1,9 @@
-use std::io;
+use std::old_io;
 fn main() {
-    let lines: u32 = io::stdin().read_line().ok().unwrap().trim().parse().unwrap();
+    let lines: u32 = old_io::stdin().read_line().ok().unwrap().trim().parse().unwrap();
     let mut num: u32;
     for _ in (0u32..lines) {
-        num = io::stdin().read_line().ok().unwrap().trim().parse().unwrap();
+        num = old_io::stdin().read_line().ok().unwrap().trim().parse().unwrap();
         println!("{}", run(num));
     }
 }
