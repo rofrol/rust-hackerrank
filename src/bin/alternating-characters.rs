@@ -1,9 +1,13 @@
-use std::old_io;
+use std::io;
+use std::io::prelude::*;
+
 fn main() {
-    let lines: u32 = old_io::stdin().read_line().ok().unwrap().trim().parse().unwrap();
+    let mut reader = io::stdin();
+    let lines: u32 = reader.lock().lines().next().unwrap().ok().unwrap().trim().parse().unwrap();
     for _ in (0u32..lines) {
-        let line = old_io::stdin().read_line().ok().unwrap().trim().to_string();
-        println!("{}", run(line.as_slice()));
+        let line = reader.lock().lines().next().unwrap().ok().unwrap().trim().to_string();
+        //println!("{}", run(line.as_slice()));
+        println!("{}", run(&*line));
     }
 }
 

@@ -6,4 +6,4 @@ Run all tests:
 
 Run single test, i.e.
 
-    cargo test --test solve-me-first
+    cargo test --bin solve-me-first
