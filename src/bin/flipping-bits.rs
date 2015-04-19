@@ -2,7 +2,7 @@ use std::io;
 use std::io::prelude::*;
 
 fn main() {
-    let mut reader = io::stdin();
+    let reader = io::stdin();
     let lines: u32 = reader.lock().lines().next().unwrap().ok().unwrap().trim().parse().unwrap();
     let mut num: u32;
     for i in (0u32..lines) {

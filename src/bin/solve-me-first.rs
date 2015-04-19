@@ -2,7 +2,7 @@ use std::io;
 use std::io::prelude::*;
 
 fn main() {
-    let mut reader = io::stdin();
+    let reader = io::stdin();
     let num1: u32 = reader.lock().lines().next().unwrap().ok().unwrap().trim().parse().unwrap();
     let num2: u32 = reader.lock().lines().next().unwrap().ok().unwrap().trim().parse().unwrap();
     println!("{}", num1 + num2);
