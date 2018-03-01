@@ -3,10 +3,28 @@ use std::io::prelude::*;
 
 fn main() {
     let reader = io::stdin();
-    let lines: u32 = reader.lock().lines().next().unwrap().ok().unwrap().trim().parse().unwrap();
+    let lines: u32 = reader
+        .lock()
+        .lines()
+        .next()
+        .unwrap()
+        .ok()
+        .unwrap()
+        .trim()
+        .parse()
+        .unwrap();
     let mut num: u32;
-    for i in (0u32..lines) {
-        num = reader.lock().lines().next().unwrap().ok().unwrap().trim().parse().unwrap();
+    for i in 0u32..lines {
+        num = reader
+            .lock()
+            .lines()
+            .next()
+            .unwrap()
+            .ok()
+            .unwrap()
+            .trim()
+            .parse()
+            .unwrap();
         println!("{}", run(num));
     }
 }

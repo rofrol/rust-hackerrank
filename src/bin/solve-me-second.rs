@@ -3,9 +3,26 @@ use std::io::prelude::*;
 
 fn main() {
     let reader = io::stdin();
-    let lines: u32 = reader.lock().lines().next().unwrap().ok().unwrap().trim().parse().unwrap();
-    for _ in (0u32..lines) {
-        let line = reader.lock().lines().next().unwrap().ok().unwrap().trim().to_string();
+    let lines: u32 = reader
+        .lock()
+        .lines()
+        .next()
+        .unwrap()
+        .ok()
+        .unwrap()
+        .trim()
+        .parse()
+        .unwrap();
+    for _ in 0u32..lines {
+        let line = reader
+            .lock()
+            .lines()
+            .next()
+            .unwrap()
+            .ok()
+            .unwrap()
+            .trim()
+            .to_string();
         println!("{}", run(&line));
     }
 }
